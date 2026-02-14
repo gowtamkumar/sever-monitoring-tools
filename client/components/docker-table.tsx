@@ -38,7 +38,7 @@ export function DockerTable({ containers, stats, onViewLogs, onViewTop }: Docker
         </thead>
         <tbody className="divide-y divide-slate-700">
           {containers.map(container => {
-            const stat = stats.find(s => s.name === container.name) || {};
+            const stat: any = stats.find(s => s.name === container.name) || {};
             const isUp = container.status.toLowerCase().includes('up');
 
             return (
